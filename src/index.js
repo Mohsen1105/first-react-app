@@ -1,7 +1,7 @@
 // react 17 dont need to use import react
 //import React from 'react'
 import ReactDOM from 'react-dom'
-
+import App from './App'
 
 // 1
 // const element = React.createElement(
@@ -20,14 +20,14 @@ import ReactDOM from 'react-dom'
 //ReactDOM.render(element, root)
 
 
-// 3. functions (for using components we must create function)
-function App(){
-    return(
-    <div id="app" className='container'>
-        Hello
-    </div>
-)
-}
+// // 3. functions (for using components we must create function)
+// function App(){
+//     return(
+//     <div id="app" className='container'>
+//         Hello
+//     </div>
+// )
+// }
 
 ReactDOM.render(<App/>, document.getElementById('root'))
 

@@ -3,7 +3,7 @@ import Product from "./components/Products"
 
 function App(){
     return(
-    <div id="app" className='container'>
+    <div className='container'>
         <Product/>
         <Product/>
         <Product/>

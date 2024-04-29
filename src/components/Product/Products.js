@@ -1,6 +1,7 @@
 import './Product.css'
 
 
+
 // function Product(){
 //     return <div className='product'>Product</div>
 // }
@@ -13,10 +14,16 @@ import './Product.css'
 
 //object destructing (implicit props)
     const Product = ({title}) => {
+
+        // declare one function into another function
+        const titleHandler = () => {
+            console.log(title)
+        }
+
         return <div className='product'>
             <div>{title}</div>
             <div >
-                <button className='btn'>Title</button>
+                <button className='btn' onClick={titleHandler}>Title</button>
             </div>
         </div>
     }

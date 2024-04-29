@@ -1,10 +1,12 @@
 
-
+import Product from "./components/Products"
 
 function App(){
     return(
     <div id="app" className='container'>
-        Hello
+        <Product/>
+        <Product/>
+        <Product/>
     </div>
 )
 }

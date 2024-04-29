@@ -1,7 +1,7 @@
 import './Product.css'
 
-function Product(){
-    return <div className='product'>Product</div>
+function Product(props){
+    return <div className='product'>{props.title}</div>
 }
 
 export default Product

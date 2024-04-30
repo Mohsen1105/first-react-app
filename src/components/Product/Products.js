@@ -13,17 +13,21 @@ import './Product.css'
 // }
 
 //object destructing (implicit props)
-    const Product = ({title}) => {
+    const Product = ({product, onDelete}) => {
 
         // declare one function into another function
-        const titleHandler = () => {
-            console.log(title)
-        }
+        // const titleHandler = () => {
+        //     console.log(title)
+        // }
+
+
 
         return <div className='product'>
-            <div>{title}</div>
+            <div>{product.title}</div>
             <div >
-                <button className='btn' onClick={titleHandler}>Title</button>
+                <button className='btn' onClick={() => onDelete(product.id)}>
+                    Delete
+                </button>
             </div>
         </div>
     }

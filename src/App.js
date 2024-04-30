@@ -12,16 +12,12 @@ const App = () => {
         {id: 1, title: 'Book 1'},
         {id: 2, title: 'Book 2'},
         {id: 3, title: 'Book 3'},
-    ])
+    ])   
 
-    // main state
-    // const products = [
-    //     {id: 1, title: 'Book 1'},
-    //     {id: 2, title: 'Book 2'},
-    //     {id: 3, title: 'Book 3'},    
-    // ]
-
-    
+    const deleteProduct = (id) => {
+        // console.log(`Deleted ${id}`)
+        setProducts(products.filter((item) => item.id !== id))
+    }
 
     return(
     <div className='container'>
@@ -34,7 +30,7 @@ const App = () => {
         <Product title='Book 2'/>
         <Product title='Book 3'/> */}
 
-        <ProductList products={products}/>
+        <ProductList products={products} onDelete={deleteProduct}/>
 
     </div>
 )

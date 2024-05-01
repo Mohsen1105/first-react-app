@@ -2,6 +2,7 @@
 import { useState } from "react" 
 //import Product from "./components/Product/Products"
 import ProductList from "./components/ProductList/ProductList"
+import AddProduct from "./components/AddProduct/AddProduct"
 
 //function App(){
 const App = () => {
@@ -13,6 +14,15 @@ const App = () => {
         {id: 2, title: 'Book 2'},
         {id: 3, title: 'Book 3'},
     ])   
+
+    const addProduct = (title) => {
+        // 1.Create product
+        const id = Math.floor(Math.random()* 10000)
+        const newProduct = {id, ...title}
+
+        // 2.Add to state
+        setProducts([...products, newProduct])
+    }
 
     const deleteProduct = (id) => {
         // console.log(`Deleted ${id}`)
@@ -29,7 +39,7 @@ const App = () => {
         {/* <Product title='Book 1'/>
         <Product title='Book 2'/>
         <Product title='Book 3'/> */}
-
+        <AddProduct onAdd={addProduct}/>
         <ProductList products={products} onDelete={deleteProduct}/>
 
     </div>
